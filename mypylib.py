@@ -17,6 +17,14 @@ def findPi(nthrows=100*1000*1000):
 def magnitude(re, im):
   return sqrt(re*re+im*im)
 
+def count3d(n):
+    count=0
+    for i in range (n):
+        for j in range (i+1,n):
+            for k in range (j+1,n):
+                count = count +1
+    return count
+
 def mandel_test(c_re, c_im, NTRIALS):
   # If a point is in the set, its magnitude will remain bounded by
   # 2.0 over iterations of z -> z^2 + C.  Stop the loop after a 
